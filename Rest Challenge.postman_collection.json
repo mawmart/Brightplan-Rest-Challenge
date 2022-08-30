@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "d2d61b6d-9c27-48e0-8d30-86dd0599440d",
+		"name": "Rest Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3MVG9kBt168mda_.6tGkZmPzw315V5QitUud60TfC6gWhzq3Cm9uL6gjTBWP5Eof9tJsad1zB4M4DKcvnK56K",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "09090690C8C78D36F29F7F4CAD38AA86B0A2529D7337F30E82989134C0046E7B",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "mawcasco-sfs@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "d8fT4Gk7eKLym8s",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D4x000007rDEk!AQgAQG3iEegG6Wqxq9i7UP59TvOV5CeMaP2LlZYboeQRL.tmKNCveSK5dOOHn8RMySGvawpnnDGzqYnVHsRIGVSYq_Mwa5Dx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oktana129-dev-ed.my.salesforce.com/services/apexrest/Account/0014x00001Gyqh9AAB",
+					"protocol": "https",
+					"host": [
+						"oktana129-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"Account",
+						"0014x00001Gyqh9AAB"
+					]
+				},
+				"description": "list of Accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D4x000007rDEk!AQgAQPoYY7t_vMiPM5KFDElkd10OpfNFJ0yySlAmbk2EfHXEUZfiiEs5fKTgAr.S_vzxhm6JhyKWCOFmSXNt5fcvHkL9TmII",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oktana129-dev-ed.my.salesforce.com/services/apexrest/Account/0014x00001Gyq30AAB",
+					"protocol": "https",
+					"host": [
+						"oktana129-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"Account",
+						"0014x00001Gyq30AAB"
+					]
+				},
+				"description": "list of Accounts"
+			},
+			"response": []
+		},
+		{
+			"name": "Post Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D4x000007rDEk!AQgAQMyjUMCKapy2pPwr7GhFzFxZG69Po8_7gvoufp3f62hu7OV.HpVPkj85NWWpyxqozn5awAKvSYdVll47hcEMEZHP1PPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restAccounts\": [\n    {\n        \"name\": \"Marcos Almada\",\n        \"phone\": \"555-677-988\",\n        \"billingStreet\": \"98 Street\",\n        \"billingCity\": \"New York\",\n        \"billingState\": \"NY\",\n        \"billingCountry\": \"US\"\n    },\n    {\n        \"name\": \"Jhon Madelaire\",\n        \"phone\": \"555-123-321\",\n        \"billingStreet\": \"Street 098\",\n        \"billingCity\": \"Miami\",\n        \"billingState\": \"FL\",\n        \"billingCountry\": \"US\"\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oktana129-dev-ed.my.salesforce.com/services/apexrest/Account/",
+					"protocol": "https",
+					"host": [
+						"oktana129-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"Account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D4x000007rDEk!AQgAQG3iEegG6Wqxq9i7UP59TvOV5CeMaP2LlZYboeQRL.tmKNCveSK5dOOHn8RMySGvawpnnDGzqYnVHsRIGVSYq_Mwa5Dx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restAccount\":{\n        \"id\": \"0014x00001Gyqh9AAB\",\n        \"name\": \"Mauricio Casco\",\n        \"phone\": \"098765432\",\n        \"billingStreet\": \"Street 00\",\n        \"billingCity\": \"Miami\",\n        \"billingState\": \"FL\",\n        \"billingCountry\": \"US\"\n    }\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://oktana129-dev-ed.my.salesforce.com/services/apexrest/Account/",
+					"protocol": "https",
+					"host": [
+						"oktana129-dev-ed",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"apexrest",
+						"Account",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
