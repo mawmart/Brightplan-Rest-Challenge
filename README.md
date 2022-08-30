@@ -1,18 +1,13 @@
-# Salesforce DX Project: Next Steps
+# Coding Challenge - Salesforce developer
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+Create REST APIs which allow creating, updating, getting and deleting user accounts
 
-## How Do You Plan to Deploy Your Changes?
+## Expected Results
+A collection of Postman requests that can be used to test the CRUD APIs.
+APIs are able to create new accounts, update any data field in an account, delete accounts, as well as getting
+accounts. Errors in user inputs, if any, must be caught, flagged and reported appropriately.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Success criteria
+Program works per specification.
+Proper REST API CRUD design.
+If time permits write a test class to validate your output is correct, and include test cases as a part of your submittal
