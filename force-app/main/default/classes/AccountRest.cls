@@ -51,7 +51,6 @@ global with sharing class AccountRest {
                 newAccount.BillingCountry = restAccount.billingCountry;
                 newAccounts.add(newAccount);
             }
-            System.debug(newAccounts);
             if(Account.sObjectType.getDescribe().isCreateable()){
                 insert newAccounts;
                 //create trigger to run async job (queueable)
